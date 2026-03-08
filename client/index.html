@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konsultan Kegalauan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Konsultan Kegalauan</h1>
+      <p>Asisten AI yang bantu kamu mikir jernih sebelum ambil keputusan.</p>
+    </header>
+
+    <div id="chat-box" class="chat-box">
+      <div class="message bot">
+        Halo! Aku Konsultan Kegalauan. Ceritakan pilihan yang lagi bikin kamu galau, nanti aku bantu analisis biar keputusanmu lebih mantap. Kamu juga bisa upload gambar, dokumen, atau audio.
+      </div>
+    </div>
+
+    <div id="file-preview" class="file-preview hidden">
+      <span id="file-preview-name"></span>
+      <button type="button" id="file-remove-btn" title="Hapus file">&times;</button>
+    </div>
+
+    <form id="chat-form" class="chat-form">
+      <div class="upload-buttons">
+        <label class="upload-label" title="Upload gambar">
+          <input type="file" id="file-image" accept="image/*" hidden />
+          <span class="upload-icon">🖼️</span>
+        </label>
+        <label class="upload-label" title="Upload dokumen">
+          <input type="file" id="file-document" accept=".pdf,.doc,.docx,.txt,.csv,.xls,.xlsx" hidden />
+          <span class="upload-icon">📄</span>
+        </label>
+        <label class="upload-label" title="Upload audio">
+          <input type="file" id="file-audio" accept="audio/*" hidden />
+          <span class="upload-icon">🎵</span>
+        </label>
+      </div>
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Lagi galau soal apa? Ceritakan di sini..."
+        autocomplete="off"
+      />
+      <button type="submit" id="send-btn">Kirim</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
